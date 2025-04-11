@@ -47,3 +47,17 @@
   background-color: rgba(0, 76, 255, 0.1); /* or any subtle color */
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px 8%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+  .navbar ul {
+    display: none;
+  }
+}
