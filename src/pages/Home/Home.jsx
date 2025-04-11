@@ -37,12 +37,21 @@ function Home() {
         {displayCoin.slice(0, 10).map((item, index) => (
           <div className="table-layout" key={index}>
             <p>{item.market_cap_rank}</p>
-            <div>
+            <div className="table-coin">
               <img src={item.image} />
               <p>{item.name + " - " + item.symbol}</p>
             </div>
             <p>
-              {currency.symbol} {item.current_price}
+              {currency.symbol} {item.current_price.tolocaleString()}
+            </p>
+            <p
+              className={item.price_change_percentage_24h > 0 ? "green" : "red"}
+            >
+              {Math.round(item.price_change_percentage_24h * 100) / 100}
+            </p>
+            <p className="market-cap">
+              {currency.symbol}
+              {item.market_cap.tolocaleString()}
             </p>
           </div>
         ))}
