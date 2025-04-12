@@ -16,7 +16,7 @@ function Coin() {
 				method: 'GET',
 				headers: {
 					accept: 'application/json',
-					'x-cg-demo-api-key': 'CG-gwkjwPGZdcobSjEicRN72mjj',
+					'x-cg-demo-api-key': import.meta.env.VITE_API_KEY,
 				},
 			};
 
