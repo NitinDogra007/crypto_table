@@ -24,10 +24,10 @@ dist-ssr
 *.sw?
 
 # Local env files
-.env
 .env.*.local
 .env.local
 *.local
+.env
 
 # Vite cache
 .vite/
